@@ -1,0 +1,22 @@
+<div class="b-wrapper">
+    <div class="flex flex-wrap space-between">
+        <mat-form-field>
+            <mat-select [value]="categories[0]" (valueChange)="onChangeCategory($event)">
+                <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select [value]="entries[0]" (valueChange)="onChangeEntry($event)">
+                <mat-option *ngFor="let entry of entries" [value]="entry">{{ entry }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <google-chart [data]="dataChart"></google-chart>
+    <div class="flex flex-wrap space-between b-wrapper__about">
+        <p>Month: {{month}}</p>
+        <button mat-stroked-button *ngIf="entry !== entries[0]" (click)="onClick(entry)">Open</button>
+        <p>Total: {{total}}</p>
+    </div>
+
+</div>
+

@@ -1,0 +1,8 @@
+.b-wrapper {
+    margin: 2em;
+    border: 1px solid #000;
+    padding: 2em 3em;
+}
+.b-wrapper__about {
+    line-height: 36px;
+}
